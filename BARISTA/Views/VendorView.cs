@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace BARISTA.Views
 {
-    public partial class Productivity : Form
+    public partial class VendorView : Form
     {
-        public Productivity()
+        public VendorView()
         {
             InitializeComponent();
         }

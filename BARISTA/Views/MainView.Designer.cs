@@ -1,6 +1,6 @@
 ﻿namespace BARISTA
 {
-    partial class Main
+    partial class MainView
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainView));
             this.Supply_B = new System.Windows.Forms.Button();
             this.Manufacturer_B = new System.Windows.Forms.Button();
             this.Vendor_B = new System.Windows.Forms.Button();
@@ -49,6 +49,7 @@
             this.Supply_B.TabIndex = 0;
             this.Supply_B.Text = "Поставка";
             this.Supply_B.UseVisualStyleBackColor = true;
+            this.Supply_B.Click += new System.EventHandler(this.Supply_B_Click);
             // 
             // Manufacturer_B
             // 
@@ -58,6 +59,7 @@
             this.Manufacturer_B.TabIndex = 1;
             this.Manufacturer_B.Text = "Производитель";
             this.Manufacturer_B.UseVisualStyleBackColor = true;
+            this.Manufacturer_B.Click += new System.EventHandler(this.Manufacturer_B_Click);
             // 
             // Vendor_B
             // 
@@ -67,6 +69,7 @@
             this.Vendor_B.TabIndex = 2;
             this.Vendor_B.Text = "Поставщик";
             this.Vendor_B.UseVisualStyleBackColor = true;
+            this.Vendor_B.Click += new System.EventHandler(this.Vendor_B_Click);
             // 
             // Catalogy_B
             // 
@@ -76,6 +79,7 @@
             this.Catalogy_B.TabIndex = 3;
             this.Catalogy_B.Text = "Каталог";
             this.Catalogy_B.UseVisualStyleBackColor = true;
+            this.Catalogy_B.Click += new System.EventHandler(this.Catalogy_B_Click);
             // 
             // Warehouse_B
             // 
@@ -85,6 +89,7 @@
             this.Warehouse_B.TabIndex = 4;
             this.Warehouse_B.Text = "Склад";
             this.Warehouse_B.UseVisualStyleBackColor = true;
+            this.Warehouse_B.Click += new System.EventHandler(this.Warehouse_B_Click);
             // 
             // Employee_B
             // 
@@ -94,6 +99,7 @@
             this.Employee_B.TabIndex = 5;
             this.Employee_B.Text = "Сотрудник";
             this.Employee_B.UseVisualStyleBackColor = true;
+            this.Employee_B.Click += new System.EventHandler(this.Employee_B_Click);
             // 
             // Position_B
             // 
@@ -103,6 +109,7 @@
             this.Position_B.TabIndex = 6;
             this.Position_B.Text = "Должность";
             this.Position_B.UseVisualStyleBackColor = true;
+            this.Position_B.Click += new System.EventHandler(this.Position_B_Click);
             // 
             // Menu_B
             // 
@@ -112,6 +119,7 @@
             this.Menu_B.TabIndex = 7;
             this.Menu_B.Text = "Меню";
             this.Menu_B.UseVisualStyleBackColor = true;
+            this.Menu_B.Click += new System.EventHandler(this.Menu_B_Click);
             // 
             // Check_B
             // 
@@ -121,6 +129,7 @@
             this.Check_B.TabIndex = 8;
             this.Check_B.Text = "Чек";
             this.Check_B.UseVisualStyleBackColor = true;
+            this.Check_B.Click += new System.EventHandler(this.Check_B_Click);
             // 
             // Exit_B
             // 
@@ -130,6 +139,7 @@
             this.Exit_B.TabIndex = 9;
             this.Exit_B.Text = "Выход";
             this.Exit_B.UseVisualStyleBackColor = true;
+            this.Exit_B.Click += new System.EventHandler(this.Exit_B_Click);
             // 
             // Main
             // 
