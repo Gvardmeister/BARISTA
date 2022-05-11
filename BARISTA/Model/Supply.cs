@@ -13,9 +13,9 @@ namespace BARISTA.Model
 
         public int Id { get; set; }
         public string Name { get; set; }
-        public DateTime dateTime { get; set; }
+        public DateTime datetime { get; set; }
         public int Count { get; set; }
-        public DateTime dateExpire { get; set; }
+        public DateTime DateExpire { get; set; }
 
         public ICollection<SupplyOfGoods> supplyOfGoods { get; set; }
         public ICollection<SupplyAccounting> supplies { get; set; }

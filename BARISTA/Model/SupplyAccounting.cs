@@ -14,12 +14,12 @@ namespace BARISTA.Model
         public int LastRecources { get; set; }
 
         public ICollection<Supply> supplies { get; set; }
-        public ICollection<Warehouse> warehouses { get; set; }
+        public int WarehouseID { get; set; }
+        public virtual Warehouse Warehouse { get; set; }
 
         public SupplyAccounting()
         {
             supplies = new List<Supply>();
-            warehouses = new List<Warehouse>();
         }
     }
 }
