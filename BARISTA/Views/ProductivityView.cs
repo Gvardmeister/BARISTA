@@ -47,7 +47,16 @@ namespace BARISTA.Views
 
         private void Back_B_Click(object sender, EventArgs e)
         {
+            try
+            {
+                MessageBox.Show("Вы точно хотите закрыть вкладку?");
 
+                this.Close();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
