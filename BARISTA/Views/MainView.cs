@@ -147,7 +147,40 @@ namespace BARISTA
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void MainView_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                Application.Exit();
+            }
+        }
+
+        private void MainView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Вы действительно хотите выйти?", "Информация", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
+                {
+                    e.Cancel = false;
+                }
+                else
+                {
+                    e.Cancel = true; 
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -19,12 +19,13 @@ namespace BARISTA.Model
 
         public ICollection<SupplyOfGoods> supplyOfGoods { get; set; }
         public ICollection<SupplyAccounting> supplies { get; set; }
-        // еще поле
+        public ICollection<Employee> employees { get; set; }
 
         public Supply()
         {
             supplyOfGoods = new List<SupplyOfGoods>();
             supplies = new List<SupplyAccounting>();
+            employees = new List<Employee>();
         }
     }
 }

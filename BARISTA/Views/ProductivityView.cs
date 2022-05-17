@@ -49,8 +49,6 @@ namespace BARISTA.Views
         {
             try
             {
-                MessageBox.Show("Вы точно хотите закрыть вкладку?");
-
                 this.Close();
             }
             catch(Exception ex)

@@ -141,7 +141,7 @@
             this.Exit_B.UseVisualStyleBackColor = true;
             this.Exit_B.Click += new System.EventHandler(this.Exit_B_Click);
             // 
-            // Main
+            // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -157,9 +157,11 @@
             this.Controls.Add(this.Manufacturer_B);
             this.Controls.Add(this.Supply_B);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Main";
+            this.Name = "MainView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Бариста";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainView_FormClosing);
+            this.Load += new System.EventHandler(this.MainView_Load);
             this.ResumeLayout(false);
 
         }

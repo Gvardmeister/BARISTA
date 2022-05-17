@@ -8,18 +8,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace BARISTA.Model
 {
-    internal class Check
+    internal class Position
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key]
-        [ForeignKey("Employee")]
 
         public int Id { get; set; }
-        public DateTime dateTime { get; set; }
-        public decimal price { get; set; }
+        public string Name { get; set; }
+        public decimal Salary { get; set; }
 
-        public int? SaleId { get; set; }
-        public Sale sale { get; set; }
-        public Employee employee { get; set; }
+        public AppointmentPosition Appointment { get; set; }
     }
 }
