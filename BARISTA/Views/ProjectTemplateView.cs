@@ -24,36 +24,52 @@ namespace BARISTA
             {
                 try
                 {
-                    string manufacturer = Manufacturer_TB.Text.Trim();
-
-                    if (String.IsNullOrWhiteSpace(manufacturer) && !Manufacturer_TB.ReadOnly)
+                    if (!Manufacturer_TB.ReadOnly)
                     {
-                        Manufacturer_TB.Focus();
+                        string manufacturer = Manufacturer_TB.Text.Trim();
 
-                        throw new Exception("Введите производителя");
+                        if (String.IsNullOrWhiteSpace(manufacturer))
+                        {
+                            Manufacturer_TB.Focus();
+
+                            throw new Exception("Введите производителя");
+                        }
                     }
 
-                    string provider = Provider_TB.Text.Trim();
-
-                    if (String.IsNullOrWhiteSpace(provider) && !Provider_TB.ReadOnly)
+                    if (!Provider_TB.ReadOnly)
                     {
-                        Provider_TB.Focus();
+                        string provider = Provider_TB.Text.Trim();
 
-                        throw new Exception("Введите поставщика");
+                        if (String.IsNullOrWhiteSpace(provider))
+                        {
+                            Provider_TB.Focus();
+
+                            throw new Exception("Введите поставщика");
+                        }
                     }
 
-                    string UR_adress = UR_adress_TB.Text.Trim();
-
-                    if (String.IsNullOrWhiteSpace(UR_adress) && !UR_adress_TB.ReadOnly)
+                    if (!UR_adress_TB.ReadOnly)
                     {
-                        UR_adress_TB.Focus();
+                        string UR_adress = UR_adress_TB.Text.Trim();
 
-                        throw new Exception("Введите юридический адрес");
-                    }
+                        if (String.IsNullOrWhiteSpace(UR_adress))
+                        {
+                            UR_adress_TB.Focus();
 
-                    if (Telephone_TB.ReadOnly)
+                            throw new Exception("Введите юридический адрес");
+                        }
+                    }                  
+
+                    if (!Telephone_TB.ReadOnly)
                     {
-                        int telephone = Convert.ToInt32(Telephone_TB.Text.Trim());
+                        if (Telephone_TB.Text.Trim() == "")
+                        {
+                            Telephone_TB.Focus();
+
+                            throw new Exception("Поле телефона не может быть пустым");
+                        }
+
+                        int telephone = Convert.ToInt32(Telephone_TB.Text);
 
                         if (telephone < 0 || telephone > 9)
                         {
@@ -62,23 +78,29 @@ namespace BARISTA
                             throw new Exception("Номер телефона должен использовать значения в диапазоне от 0 до 9");
                         }
                     }
-                    else
+
+                    if (!Provider_TB.ReadOnly)
                     {
-                        throw new Exception("Поле телефон заблокировано");
+                        string ProductName = Product_Name_TB.Text.Trim();
+
+                        if (string.IsNullOrWhiteSpace(ProductName))
+                        {
+                            Provider_TB.Focus();
+
+                            throw new Exception("Введите название продукта");
+                        }
                     }
 
-                    string ProductName = Product_Name_TB.Text.Trim();
-
-                    if (string.IsNullOrWhiteSpace(ProductName) && !Provider_TB.ReadOnly)
+                    if (!Price_TB.ReadOnly)
                     {
-                        Provider_TB.Focus();
+                        if (Price_TB.Text.Trim() == "")
+                        {
+                            Price_TB.Focus();
 
-                        throw new Exception("Введите название продукта");
-                    }
+                            throw new Exception("Поле цены не может быть пустым");
+                        }
 
-                    if (Price_TB.ReadOnly)
-                    {
-                        decimal price = Convert.ToDecimal(Price_TB.Text.Trim());
+                        decimal price = Convert.ToDecimal(Price_TB.Text);
 
                         if (price < 0)
                         {
@@ -87,81 +109,99 @@ namespace BARISTA
                             throw new Exception("Цена должна содержать числовой формат");
                         }
                     }
-                    else
+
+                    if (!Reciept_TB.ReadOnly)
                     {
-                        throw new Exception("Поле цена заблокировано");
+                        string Reciept = Reciept_TB.Text.Trim();
+
+                        if (string.IsNullOrWhiteSpace(Reciept))
+                        {
+                            Reciept_TB.Focus();
+
+                            throw new Exception("Введите рецепт");
+                        }
                     }
 
-                    string Reciept = Reciept_TB.Text.Trim();
-
-                    if (string.IsNullOrWhiteSpace(Reciept) && !Reciept_TB.ReadOnly)
+                    if (!Birthday_TB.ReadOnly)
                     {
-                        Reciept_TB.Focus();
 
-                        throw new Exception("Введите рецепт");
+                        if (TextIsDate(Birthday_TB.Text))
+                        {
+                            Birthday_TB.Focus();
+
+                            throw new Exception("Дата рождения имеет неверный формат");
+                        }
                     }
 
-                    if (TextIsDate(Birthday_TB.Text) && !Birthday_TB.ReadOnly)
+                    if (!Post_name_TB.ReadOnly)
                     {
-                        Birthday_TB.Focus();
+                        string PostName = Post_name_TB.Text.Trim();
 
-                        throw new Exception("Дата рождения имеет неверный формат");
-                    }
+                        if (string.IsNullOrWhiteSpace(PostName))
+                        {
+                            throw new Exception("Введите название должности");
+                        }
+                    }                
 
-                    string PostName = Post_name_TB.Text.Trim();
-
-                    if (string.IsNullOrWhiteSpace(PostName) && !Post_name_TB.ReadOnly)
+                    if (!ZP_TB.ReadOnly)
                     {
-                        throw new Exception("Введите название должности");
-                    }
+                        if (ZP_TB.Text.Trim() == "")
+                        {
+                            ZP_TB.Focus();
 
-                    if (ZP_TB.ReadOnly)
-                    {
-                        decimal ZP = Convert.ToDecimal(ZP_TB.Text.Trim());
+                            throw new Exception("Поле заработной платы не может быть пустым");
+                        }
+
+                        decimal ZP = Convert.ToDecimal(ZP_TB.Text);
 
                         if (ZP < 0)
                         {
                             ZP_TB.Focus();
 
-                            throw new Exception("Поле заработной платы должно содержать числовой формат");
+                            throw new Exception("Поле заработной платы не может быть отрицательным");
                         }
                     }
-                    else
-                    {
-                        throw new Exception("Поле заработной платы заблокировано");
-                    }
 
-                    if (Sum_TB.ReadOnly)
+                    if (!Sum_TB.ReadOnly)
                     {
-                        decimal Sum = Convert.ToDecimal(Sum_TB.Text.Trim());
-
-                        if (Sum < 0)
+                        if (Sum_TB.Text.Trim() == "")
                         {
                             Sum_TB.Focus();
 
                             throw new Exception("Поле суммы не может быть пустым");
                         }
+
+                        decimal Sum = Convert.ToDecimal(Sum_TB.Text);
+
+                        if (Sum < 0)
+                        {
+                            Sum_TB.Focus();
+
+                            throw new Exception("Поле суммы не может быть отрицательным");
+                        }
                     }
-                    else
+
+                    if (!FIO_worker_TB.ReadOnly)
                     {
-                        throw new Exception("Поле суммы заблокировано");
+                        string FIO_worker = FIO_worker_TB.Text.Trim();
+
+                        if (string.IsNullOrWhiteSpace(FIO_worker))
+                        {
+                            FIO_worker_TB.Focus();
+
+                            throw new Exception("Введите ФИО сотрудника");
+                        }
                     }
 
-                    string FIO_worker = FIO_worker_TB.Text.Trim();
-
-                    if (string.IsNullOrWhiteSpace(FIO_worker) && !FIO_worker_TB.ReadOnly)
+                    if (!Expiration_date_TB.ReadOnly)
                     {
-                        FIO_worker_TB.Focus();
+                        if (ProductIsDate(Expiration_date_TB.Text))
+                        {
+                            Expiration_date_TB.Focus();
 
-                        throw new Exception("Введите ФИО сотрудника");
-                    }
-
-                    if (ProductIsDate(Expiration_date_TB.Text) && !Expiration_date_TB.ReadOnly)
-                    {
-                        Expiration_date_TB.Focus();
-
-                        throw new Exception("Поле срока годности содержит неверный формат");
-                    }
+                            throw new Exception("Поле срока годности содержит неверный формат");
+                        }
+                    }                   
                 }
                 catch (FormatException Fex)
                 {
