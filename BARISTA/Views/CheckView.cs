@@ -28,5 +28,10 @@ namespace BARISTA.Views
                 MessageBox.Show(ex.Message, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void Add_B_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

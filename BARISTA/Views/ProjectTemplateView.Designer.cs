@@ -41,8 +41,6 @@ namespace BARISTA
             this.Product_Name_TB = new System.Windows.Forms.TextBox();
             this.Price_L = new System.Windows.Forms.Label();
             this.Price_TB = new System.Windows.Forms.TextBox();
-            this.Date_delivery_L = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.FIO_worker_L = new System.Windows.Forms.Label();
             this.FIO_worker_TB = new System.Windows.Forms.TextBox();
             this.Quantity_L = new System.Windows.Forms.Label();
@@ -55,16 +53,12 @@ namespace BARISTA
             this.Birthday_TB = new System.Windows.Forms.TextBox();
             this.Expiration_date_L = new System.Windows.Forms.Label();
             this.Expiration_date_TB = new System.Windows.Forms.TextBox();
-            this.ZP_L = new System.Windows.Forms.Label();
-            this.ZP_TB = new System.Windows.Forms.TextBox();
-            this.Barista_L = new System.Windows.Forms.Label();
-            this.Barista_TB = new System.Windows.Forms.TextBox();
             this.Sum_TB = new System.Windows.Forms.TextBox();
             this.Sum_L = new System.Windows.Forms.Label();
-            this.Manager_TB = new System.Windows.Forms.TextBox();
-            this.Manager_L = new System.Windows.Forms.Label();
             this.OK_B = new System.Windows.Forms.Button();
             this.Cancel_B = new System.Windows.Forms.Button();
+            this.ZP_L = new System.Windows.Forms.Label();
+            this.ZP_TB = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // Manufacturer_L
@@ -181,29 +175,10 @@ namespace BARISTA
             this.Price_TB.Size = new System.Drawing.Size(116, 23);
             this.Price_TB.TabIndex = 11;
             // 
-            // Date_delivery_L
-            // 
-            this.Date_delivery_L.AutoSize = true;
-            this.Date_delivery_L.Location = new System.Drawing.Point(8, 282);
-            this.Date_delivery_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Date_delivery_L.Name = "Date_delivery_L";
-            this.Date_delivery_L.Size = new System.Drawing.Size(85, 15);
-            this.Date_delivery_L.TabIndex = 12;
-            this.Date_delivery_L.Text = "Дата поставки";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(12, 301);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(116, 23);
-            this.textBox1.TabIndex = 13;
-            // 
             // FIO_worker_L
             // 
             this.FIO_worker_L.AutoSize = true;
-            this.FIO_worker_L.Location = new System.Drawing.Point(170, 237);
+            this.FIO_worker_L.Location = new System.Drawing.Point(173, 148);
             this.FIO_worker_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.FIO_worker_L.Name = "FIO_worker_L";
             this.FIO_worker_L.Size = new System.Drawing.Size(100, 15);
@@ -212,7 +187,7 @@ namespace BARISTA
             // 
             // FIO_worker_TB
             // 
-            this.FIO_worker_TB.Location = new System.Drawing.Point(173, 256);
+            this.FIO_worker_TB.Location = new System.Drawing.Point(176, 167);
             this.FIO_worker_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.FIO_worker_TB.Name = "FIO_worker_TB";
             this.FIO_worker_TB.ReadOnly = true;
@@ -222,7 +197,7 @@ namespace BARISTA
             // Quantity_L
             // 
             this.Quantity_L.AutoSize = true;
-            this.Quantity_L.Location = new System.Drawing.Point(170, 282);
+            this.Quantity_L.Location = new System.Drawing.Point(173, 193);
             this.Quantity_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Quantity_L.Name = "Quantity_L";
             this.Quantity_L.Size = new System.Drawing.Size(72, 15);
@@ -231,7 +206,7 @@ namespace BARISTA
             // 
             // Quantity_TB
             // 
-            this.Quantity_TB.Location = new System.Drawing.Point(173, 301);
+            this.Quantity_TB.Location = new System.Drawing.Point(176, 212);
             this.Quantity_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Quantity_TB.Name = "Quantity_TB";
             this.Quantity_TB.ReadOnly = true;
@@ -241,7 +216,7 @@ namespace BARISTA
             // Reciept_L
             // 
             this.Reciept_L.AutoSize = true;
-            this.Reciept_L.Location = new System.Drawing.Point(9, 329);
+            this.Reciept_L.Location = new System.Drawing.Point(9, 292);
             this.Reciept_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Reciept_L.Name = "Reciept_L";
             this.Reciept_L.Size = new System.Drawing.Size(45, 15);
@@ -250,7 +225,7 @@ namespace BARISTA
             // 
             // Reciept_TB
             // 
-            this.Reciept_TB.Location = new System.Drawing.Point(13, 348);
+            this.Reciept_TB.Location = new System.Drawing.Point(13, 311);
             this.Reciept_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Reciept_TB.Name = "Reciept_TB";
             this.Reciept_TB.ReadOnly = true;
@@ -279,7 +254,7 @@ namespace BARISTA
             // Birthday_L
             // 
             this.Birthday_L.AutoSize = true;
-            this.Birthday_L.Location = new System.Drawing.Point(8, 374);
+            this.Birthday_L.Location = new System.Drawing.Point(171, 292);
             this.Birthday_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Birthday_L.Name = "Birthday_L";
             this.Birthday_L.Size = new System.Drawing.Size(90, 15);
@@ -288,7 +263,7 @@ namespace BARISTA
             // 
             // Birthday_TB
             // 
-            this.Birthday_TB.Location = new System.Drawing.Point(13, 393);
+            this.Birthday_TB.Location = new System.Drawing.Point(176, 311);
             this.Birthday_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Birthday_TB.Name = "Birthday_TB";
             this.Birthday_TB.ReadOnly = true;
@@ -298,7 +273,7 @@ namespace BARISTA
             // Expiration_date_L
             // 
             this.Expiration_date_L.AutoSize = true;
-            this.Expiration_date_L.Location = new System.Drawing.Point(169, 332);
+            this.Expiration_date_L.Location = new System.Drawing.Point(172, 243);
             this.Expiration_date_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Expiration_date_L.Name = "Expiration_date_L";
             this.Expiration_date_L.Size = new System.Drawing.Size(88, 15);
@@ -307,12 +282,59 @@ namespace BARISTA
             // 
             // Expiration_date_TB
             // 
-            this.Expiration_date_TB.Location = new System.Drawing.Point(173, 351);
+            this.Expiration_date_TB.Location = new System.Drawing.Point(176, 262);
             this.Expiration_date_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Expiration_date_TB.Name = "Expiration_date_TB";
             this.Expiration_date_TB.ReadOnly = true;
             this.Expiration_date_TB.Size = new System.Drawing.Size(116, 23);
             this.Expiration_date_TB.TabIndex = 25;
+            // 
+            // Sum_TB
+            // 
+            this.Sum_TB.Location = new System.Drawing.Point(176, 122);
+            this.Sum_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Sum_TB.Name = "Sum_TB";
+            this.Sum_TB.ReadOnly = true;
+            this.Sum_TB.Size = new System.Drawing.Size(116, 23);
+            this.Sum_TB.TabIndex = 33;
+            // 
+            // Sum_L
+            // 
+            this.Sum_L.AutoSize = true;
+            this.Sum_L.Location = new System.Drawing.Point(172, 103);
+            this.Sum_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Sum_L.Name = "Sum_L";
+            this.Sum_L.Size = new System.Drawing.Size(45, 15);
+            this.Sum_L.TabIndex = 32;
+            this.Sum_L.Text = "Сумма";
+            // 
+            // OK_B
+            // 
+            this.OK_B.BackColor = System.Drawing.Color.Cyan;
+            this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.OK_B.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.OK_B.ForeColor = System.Drawing.Color.Black;
+            this.OK_B.Location = new System.Drawing.Point(13, 340);
+            this.OK_B.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.OK_B.Name = "OK_B";
+            this.OK_B.Size = new System.Drawing.Size(116, 31);
+            this.OK_B.TabIndex = 34;
+            this.OK_B.Text = "ОК";
+            this.OK_B.UseVisualStyleBackColor = false;
+            // 
+            // Cancel_B
+            // 
+            this.Cancel_B.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Cancel_B.Font = new System.Drawing.Font("Microsoft New Tai Lue", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Cancel_B.ForeColor = System.Drawing.Color.Black;
+            this.Cancel_B.Location = new System.Drawing.Point(173, 340);
+            this.Cancel_B.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.Cancel_B.Name = "Cancel_B";
+            this.Cancel_B.Size = new System.Drawing.Size(116, 31);
+            this.Cancel_B.TabIndex = 35;
+            this.Cancel_B.Text = "Отмена";
+            this.Cancel_B.UseVisualStyleBackColor = false;
             // 
             // ZP_L
             // 
@@ -333,98 +355,15 @@ namespace BARISTA
             this.ZP_TB.Size = new System.Drawing.Size(116, 23);
             this.ZP_TB.TabIndex = 27;
             // 
-            // Barista_L
-            // 
-            this.Barista_L.AutoSize = true;
-            this.Barista_L.Location = new System.Drawing.Point(169, 104);
-            this.Barista_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Barista_L.Name = "Barista_L";
-            this.Barista_L.Size = new System.Drawing.Size(51, 15);
-            this.Barista_L.TabIndex = 28;
-            this.Barista_L.Text = "Бариста";
-            // 
-            // Barista_TB
-            // 
-            this.Barista_TB.Location = new System.Drawing.Point(173, 122);
-            this.Barista_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Barista_TB.Name = "Barista_TB";
-            this.Barista_TB.ReadOnly = true;
-            this.Barista_TB.Size = new System.Drawing.Size(116, 23);
-            this.Barista_TB.TabIndex = 29;
-            // 
-            // Sum_TB
-            // 
-            this.Sum_TB.Location = new System.Drawing.Point(173, 211);
-            this.Sum_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Sum_TB.Name = "Sum_TB";
-            this.Sum_TB.ReadOnly = true;
-            this.Sum_TB.Size = new System.Drawing.Size(116, 23);
-            this.Sum_TB.TabIndex = 33;
-            // 
-            // Sum_L
-            // 
-            this.Sum_L.AutoSize = true;
-            this.Sum_L.Location = new System.Drawing.Point(169, 192);
-            this.Sum_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Sum_L.Name = "Sum_L";
-            this.Sum_L.Size = new System.Drawing.Size(45, 15);
-            this.Sum_L.TabIndex = 32;
-            this.Sum_L.Text = "Сумма";
-            // 
-            // Manager_TB
-            // 
-            this.Manager_TB.Location = new System.Drawing.Point(173, 166);
-            this.Manager_TB.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Manager_TB.Name = "Manager_TB";
-            this.Manager_TB.ReadOnly = true;
-            this.Manager_TB.Size = new System.Drawing.Size(116, 23);
-            this.Manager_TB.TabIndex = 31;
-            // 
-            // Manager_L
-            // 
-            this.Manager_L.AutoSize = true;
-            this.Manager_L.Location = new System.Drawing.Point(169, 147);
-            this.Manager_L.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.Manager_L.Name = "Manager_L";
-            this.Manager_L.Size = new System.Drawing.Size(65, 15);
-            this.Manager_L.TabIndex = 30;
-            this.Manager_L.Text = "Менеджер";
-            // 
-            // OK_B
-            // 
-            this.OK_B.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.OK_B.Location = new System.Drawing.Point(13, 422);
-            this.OK_B.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.OK_B.Name = "OK_B";
-            this.OK_B.Size = new System.Drawing.Size(100, 31);
-            this.OK_B.TabIndex = 34;
-            this.OK_B.Text = "ОК";
-            this.OK_B.UseVisualStyleBackColor = true;
-            // 
-            // Cancel_B
-            // 
-            this.Cancel_B.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Cancel_B.Location = new System.Drawing.Point(189, 422);
-            this.Cancel_B.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.Cancel_B.Name = "Cancel_B";
-            this.Cancel_B.Size = new System.Drawing.Size(100, 31);
-            this.Cancel_B.TabIndex = 35;
-            this.Cancel_B.Text = "Отмена";
-            this.Cancel_B.UseVisualStyleBackColor = true;
-            // 
             // ProjectTemplateView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(302, 465);
+            this.ClientSize = new System.Drawing.Size(302, 378);
             this.Controls.Add(this.Cancel_B);
             this.Controls.Add(this.OK_B);
             this.Controls.Add(this.Sum_TB);
             this.Controls.Add(this.Sum_L);
-            this.Controls.Add(this.Manager_TB);
-            this.Controls.Add(this.Manager_L);
-            this.Controls.Add(this.Barista_TB);
-            this.Controls.Add(this.Barista_L);
             this.Controls.Add(this.ZP_TB);
             this.Controls.Add(this.ZP_L);
             this.Controls.Add(this.Expiration_date_TB);
@@ -439,8 +378,6 @@ namespace BARISTA
             this.Controls.Add(this.Quantity_L);
             this.Controls.Add(this.FIO_worker_TB);
             this.Controls.Add(this.FIO_worker_L);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.Date_delivery_L);
             this.Controls.Add(this.Price_TB);
             this.Controls.Add(this.Price_L);
             this.Controls.Add(this.Product_Name_TB);
@@ -461,6 +398,7 @@ namespace BARISTA
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Шаблон Продукции";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ProjectTemplateView_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -474,17 +412,13 @@ namespace BARISTA
         private System.Windows.Forms.Label Telephone_L;
         private System.Windows.Forms.Label Product_Name_L;
         private System.Windows.Forms.Label Price_L;
-        private System.Windows.Forms.Label Date_delivery_L;
         private System.Windows.Forms.Label FIO_worker_L;
         private System.Windows.Forms.Label Quantity_L;
         private System.Windows.Forms.Label Reciept_L;
         private System.Windows.Forms.Label Post_Name_L;
         private System.Windows.Forms.Label Birthday_L;
         private System.Windows.Forms.Label Expiration_date_L;
-        private System.Windows.Forms.Label ZP_L;
-        private System.Windows.Forms.Label Barista_L;
         private System.Windows.Forms.Label Sum_L;
-        private System.Windows.Forms.Label Manager_L;
         private System.Windows.Forms.Button OK_B;
         private System.Windows.Forms.Button Cancel_B;
         public TextBox Manufacturer_TB;
@@ -493,17 +427,15 @@ namespace BARISTA
         public TextBox Telephone_TB;
         public TextBox Product_Name_TB;
         public TextBox Price_TB;
-        public TextBox textBox1;
         public TextBox FIO_worker_TB;
         public TextBox Quantity_TB;
         public TextBox Reciept_TB;
         public TextBox Post_name_TB;
         public TextBox Birthday_TB;
         public TextBox Expiration_date_TB;
-        public TextBox ZP_TB;
-        public TextBox Barista_TB;
         public TextBox Sum_TB;
-        public TextBox Manager_TB;
+        private Label ZP_L;
+        public TextBox ZP_TB;
     }
 }
 

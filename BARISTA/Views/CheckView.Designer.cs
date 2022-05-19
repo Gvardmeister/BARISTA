@@ -81,6 +81,7 @@
             this.Add_B.TabIndex = 10;
             this.Add_B.Text = "Добавление";
             this.Add_B.UseVisualStyleBackColor = true;
+            this.Add_B.Click += new System.EventHandler(this.Add_B_Click);
             // 
             // CheckView
             // 

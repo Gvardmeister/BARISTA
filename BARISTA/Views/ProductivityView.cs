@@ -20,18 +20,18 @@ namespace BARISTA.Views
 
             context = new Infrastructure.ApplicationContext();
 
-            InitializeListOfProductivityView();
+            //InitializeListOfProductivityView();
         }
 
         private Infrastructure.ApplicationContext context;
         private List<Manufacturer> manufacturers;
 
-        private void InitializeListOfProductivityView()
-        {
-            manufacturers = new List<Manufacturer>(context.manufacturers.ToList());
+        //private void InitializeListOfProductivityView()
+        //{
+        //    manufacturers = new List<Manufacturer>(context.manufacturers.ToList());
 
-            Productivity_DGV.DataSource = manufacturers;
-        }
+        //    Productivity_DGV.DataSource = manufacturers;
+        //}
 
         private void Add_B_Click(object sender, EventArgs e)
         {
@@ -50,7 +50,7 @@ namespace BARISTA.Views
                         Name = projectTemplate.Manufacturer_TB.Text.Trim()
                     };
 
-                    context.manufacturers.Add(manufacturer);
+                    //context.manufacturers.Add(manufacturer);
                     context.SaveChanges();
 
                     manufacturers.Add(manufacturer);
