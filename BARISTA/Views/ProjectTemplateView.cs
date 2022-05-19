@@ -51,13 +51,20 @@ namespace BARISTA
                         throw new Exception("Введите юридический адрес");
                     }
 
-                    int telephone = Convert.ToInt32(Telephone_TB.Text);
-
-                    if(!Telephone_TB.ReadOnly && (telephone < 0 || telephone > 9))
+                    if (Telephone_TB.ReadOnly)
                     {
-                        Telephone_TB.Focus();
+                        int telephone = Convert.ToInt32(Telephone_TB.Text.Trim());
 
-                        throw new Exception("Номер телефона должен использовать значения в диапазоне от 0 до 9");
+                        if (telephone < 0 || telephone > 9)
+                        {
+                            Telephone_TB.Focus();
+
+                            throw new Exception("Номер телефона должен использовать значения в диапазоне от 0 до 9");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Поле телефон заблокировано");
                     }
 
                     string ProductName = Product_Name_TB.Text.Trim();
@@ -69,13 +76,20 @@ namespace BARISTA
                         throw new Exception("Введите название продукта");
                     }
 
-                    decimal price = Convert.ToDecimal(Price_TB.Text);
-
-                    if (!Price_TB.ReadOnly && (price < 0))
+                    if (Price_TB.ReadOnly)
                     {
-                        Price_TB.Focus();
+                        decimal price = Convert.ToDecimal(Price_TB.Text.Trim());
 
-                        throw new Exception("Цена должна содержать числовой формат");
+                        if (price < 0)
+                        {
+                            Price_TB.Focus();
+
+                            throw new Exception("Цена должна содержать числовой формат");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Поле цена заблокировано");
                     }
 
                     string Reciept = Reciept_TB.Text.Trim();
@@ -101,22 +115,36 @@ namespace BARISTA
                         throw new Exception("Введите название должности");
                     }
 
-                    decimal ZP = Convert.ToDecimal(ZP_TB.Text);
-
-                    if (!ZP_TB.ReadOnly && (ZP < 0))
+                    if (ZP_TB.ReadOnly)
                     {
-                        ZP_TB.Focus();
+                        decimal ZP = Convert.ToDecimal(ZP_TB.Text.Trim());
 
-                        throw new Exception("Поле заработной платы должно содержать числовой формат");
+                        if (ZP < 0)
+                        {
+                            ZP_TB.Focus();
+
+                            throw new Exception("Поле заработной платы должно содержать числовой формат");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Поле заработной платы заблокировано");
                     }
 
-                    decimal Sum = Convert.ToDecimal(Sum_TB.Text);
-
-                    if (!Sum_TB.ReadOnly && (Sum < 0))
+                    if (Sum_TB.ReadOnly)
                     {
-                        Sum_TB.Focus();
+                        decimal Sum = Convert.ToDecimal(Sum_TB.Text.Trim());
 
-                        throw new Exception("Поле суммы не может быть пустым");
+                        if (Sum < 0)
+                        {
+                            Sum_TB.Focus();
+
+                            throw new Exception("Поле суммы не может быть пустым");
+                        }
+                    }
+                    else
+                    {
+                        throw new Exception("Поле суммы заблокировано");
                     }
 
                     string FIO_worker = FIO_worker_TB.Text.Trim();
