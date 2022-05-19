@@ -53,6 +53,7 @@
             this.Back_B.TabIndex = 8;
             this.Back_B.Text = "Назад";
             this.Back_B.UseVisualStyleBackColor = true;
+            this.Back_B.Click += new System.EventHandler(this.Back_B_Click);
             // 
             // Del_B
             // 
@@ -81,7 +82,7 @@
             this.Add_B.Text = "Добавление";
             this.Add_B.UseVisualStyleBackColor = true;
             // 
-            // Catalog
+            // CatalogView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,7 +95,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Catalog";
+            this.Name = "CatalogView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Каталог";
             ((System.ComponentModel.ISupportInitialize)(this.Catalog_DGV)).EndInit();

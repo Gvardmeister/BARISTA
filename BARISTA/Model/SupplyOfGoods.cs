@@ -11,6 +11,7 @@ namespace BARISTA.Model
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
+        public int Id { get; set; }
         public int Count { get; set; }
 
         public ICollection<Catalog> catalogs { get; set; }

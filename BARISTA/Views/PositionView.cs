@@ -16,5 +16,17 @@ namespace BARISTA.Views
         {
             InitializeComponent();
         }
+
+        private void Back_B_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
     }
 }

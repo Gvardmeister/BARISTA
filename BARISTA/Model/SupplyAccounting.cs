@@ -11,6 +11,7 @@ namespace BARISTA.Model
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
+        public int Id { get; set; }
         public int LastRecources { get; set; }
 
         public ICollection<Supply> supplies { get; set; }

@@ -53,6 +53,7 @@
             this.Back_B.TabIndex = 8;
             this.Back_B.Text = "Назад";
             this.Back_B.UseVisualStyleBackColor = true;
+            this.Back_B.Click += new System.EventHandler(this.Back_B_Click);
             // 
             // Del_B
             // 
@@ -62,6 +63,7 @@
             this.Del_B.TabIndex = 7;
             this.Del_B.Text = "Удаление";
             this.Del_B.UseVisualStyleBackColor = true;
+            this.Del_B.Click += new System.EventHandler(this.Del_B_Click);
             // 
             // Update_B
             // 
@@ -71,6 +73,7 @@
             this.Update_B.TabIndex = 6;
             this.Update_B.Text = "Изменение";
             this.Update_B.UseVisualStyleBackColor = true;
+            this.Update_B.Click += new System.EventHandler(this.Update_B_Click);
             // 
             // Add_B
             // 
@@ -80,8 +83,9 @@
             this.Add_B.TabIndex = 5;
             this.Add_B.Text = "Добавление";
             this.Add_B.UseVisualStyleBackColor = true;
+            this.Add_B.Click += new System.EventHandler(this.Add_B_Click);
             // 
-            // Vendor
+            // VendorView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -94,7 +98,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Vendor";
+            this.Name = "VendorView";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Поставщик";

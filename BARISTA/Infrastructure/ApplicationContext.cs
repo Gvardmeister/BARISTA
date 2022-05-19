@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using System.Data.Entity;
 using BARISTA.Model;
 
-namespace BARISTA.DataBase
+namespace BARISTA.Infrastructure
 {
     internal class ApplicationContext : DbContext
     {
-        public ApplicationContext() : base("ApplicationContextDB")
+        public ApplicationContext() : base("ApplicationContext")
         {
             Database.CreateIfNotExists();
         }
@@ -29,5 +29,10 @@ namespace BARISTA.DataBase
         public DbSet<SupplyOfGoods> SupplyOfGoods { get; set; }
         public DbSet<Vendor> vendors { get; set; }
         public DbSet<Warehouse> warehouses { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

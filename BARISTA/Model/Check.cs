@@ -11,8 +11,6 @@ namespace BARISTA.Model
     internal class Check
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        [Key]
-        [ForeignKey("Employee")]
 
         public int Id { get; set; }
         public DateTime dateTime { get; set; }

@@ -10,10 +10,10 @@ namespace BARISTA.Model
 {
     internal class AppointmentPosition
     {
-        [Key]
-        [ForeignKey("Position, Employee")] // не уверен, что правильно
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
-        public DateTime dateTime { get; set; }
+        public int Id { get; set; }
+        public DateTime Time { get; set; }
 
         public Position position { get; set; }
         public Employee employee { get; set; }

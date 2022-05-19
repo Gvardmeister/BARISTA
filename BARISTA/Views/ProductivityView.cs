@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BARISTA.Views;
+using BARISTA.Model;
 
 namespace BARISTA.Views
 {
@@ -16,6 +17,20 @@ namespace BARISTA.Views
         public ProductivityView()
         {
             InitializeComponent();
+
+            context = new Infrastructure.ApplicationContext();
+
+            InitializeListOfProductivityView();
+        }
+
+        private Infrastructure.ApplicationContext context;
+        private List<Manufacturer> manufacturers;
+
+        private void InitializeListOfProductivityView()
+        {
+            manufacturers = new List<Manufacturer>(context.manufacturers.ToList());
+
+            Productivity_DGV.DataSource = manufacturers;
         }
 
         private void Add_B_Click(object sender, EventArgs e)
@@ -24,9 +39,21 @@ namespace BARISTA.Views
             {
                 ProjectTemplateView projectTemplate = new ProjectTemplateView();
 
+                projectTemplate.Manufacturer_TB.ReadOnly = false;
+
                 if (projectTemplate.ShowDialog() == DialogResult.OK)
                 {
-                    
+                    using ApplicationContext db = new ApplicationContext();
+
+                    Manufacturer manufacturer = new Manufacturer
+                    {
+                        Name = projectTemplate.Manufacturer_TB.Text.Trim()
+                    };
+
+                    context.manufacturers.Add(manufacturer);
+                    context.SaveChanges();
+
+                    manufacturers.Add(manufacturer);
                 }
             }
             catch (Exception ex)
@@ -49,7 +76,7 @@ namespace BARISTA.Views
         {
             try
             {
-                this.Close();
+                Close();
             }
             catch(Exception ex)
             {
