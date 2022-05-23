@@ -39,6 +39,7 @@
             this.Menu_B = new System.Windows.Forms.Button();
             this.Check_B = new System.Windows.Forms.Button();
             this.Exit_B = new System.Windows.Forms.Button();
+            this.Report_B = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // Supply_B
@@ -145,20 +146,32 @@
             this.Exit_B.BackColor = System.Drawing.Color.Red;
             this.Exit_B.Font = new System.Drawing.Font("Microsoft New Tai Lue", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.Exit_B.ForeColor = System.Drawing.Color.White;
-            this.Exit_B.Location = new System.Drawing.Point(152, 160);
+            this.Exit_B.Location = new System.Drawing.Point(12, 197);
             this.Exit_B.Name = "Exit_B";
-            this.Exit_B.Size = new System.Drawing.Size(134, 31);
+            this.Exit_B.Size = new System.Drawing.Size(274, 31);
             this.Exit_B.TabIndex = 9;
             this.Exit_B.Text = "Выход";
             this.Exit_B.UseVisualStyleBackColor = false;
             this.Exit_B.Click += new System.EventHandler(this.Exit_B_Click);
+            // 
+            // Report_B
+            // 
+            this.Report_B.Font = new System.Drawing.Font("Microsoft New Tai Lue", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.Report_B.Location = new System.Drawing.Point(152, 160);
+            this.Report_B.Name = "Report_B";
+            this.Report_B.Size = new System.Drawing.Size(134, 31);
+            this.Report_B.TabIndex = 10;
+            this.Report_B.Text = "Отчет";
+            this.Report_B.UseVisualStyleBackColor = true;
+            this.Report_B.Click += new System.EventHandler(this.Report_B_Click);
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
-            this.ClientSize = new System.Drawing.Size(295, 200);
+            this.ClientSize = new System.Drawing.Size(300, 239);
+            this.Controls.Add(this.Report_B);
             this.Controls.Add(this.Exit_B);
             this.Controls.Add(this.Check_B);
             this.Controls.Add(this.Menu_B);
@@ -192,5 +205,6 @@
         private Button Menu_B;
         private Button Check_B;
         private Button Exit_B;
+        private Button Report_B;
     }
 }

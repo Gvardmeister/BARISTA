@@ -139,6 +139,20 @@ namespace BARISTA
             }
         }
 
+        private void Report_B_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReportView reportModel = new ReportView();
+
+                reportModel.ShowDialog();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Информация", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+        }
+
         private void Exit_B_Click(object sender, EventArgs e)
         {
             try

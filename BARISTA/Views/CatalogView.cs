@@ -56,7 +56,7 @@ namespace BARISTA.Views
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Внимание!", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show(ex.Message, "Внимание", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
